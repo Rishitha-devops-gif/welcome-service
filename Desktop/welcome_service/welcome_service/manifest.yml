@@ -1,0 +1,9 @@
+applications:
+  - name: welcome_service
+    memory: 1024M  # Increased from 512M
+    instances: 1
+    path: target/welcome_service-0.0.1-SNAPSHOT.jar
+    buildpacks:
+      - java_buildpack
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
